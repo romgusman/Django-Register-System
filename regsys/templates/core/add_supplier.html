@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Adicionar Fornecedor</title>
+</head>
+<body>
+    <h1><a href="{% url 'index' %}">Voltar</a></h1>
+    <h1>Adicionar Fornecedor</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Salvar</button>
+    </form>
+</body>
+</html>
