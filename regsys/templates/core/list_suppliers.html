@@ -8,7 +8,7 @@
     <h1>Lista de Fornecedores</h1>
     <ul>
         {% for supplier in suppliers %}
-            <li>{{ supplier.name }} - {{ supplier.email }}</li>
+            <li>{{ supplier.name }} - EMAIL {{ supplier.email }} - CNPJ: {{ supplier.cnpj }}</li>
         {% endfor %}
     </ul>
     <a href="{% url 'add_supplier' %}">Adicionar Fornecedor</a>
