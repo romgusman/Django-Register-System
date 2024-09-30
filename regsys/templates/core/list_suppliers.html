@@ -6,11 +6,11 @@
 <body>
     <h1><a href="{% url 'index' %}">Voltar</a></h1>
     <h1>Lista de Fornecedores</h1>
-    <ul>
+    <table border="1">
         {% for supplier in suppliers %}
-            <li>{{ supplier.name }} - EMAIL {{ supplier.email }} - CNPJ: {{ supplier.cnpj }}</li>
+            <tr><td>{{ supplier.name }} </td><td>EMAIL: {{ supplier.email }} </td><td>CNPJ: {{ supplier.cnpj }} </td></tr>
         {% endfor %}
-    </ul>
+    </table>
     <a href="{% url 'add_supplier' %}">Adicionar Fornecedor</a>
 </body>
 </html>

@@ -7,11 +7,13 @@
 
     <h1><a href="{% url 'index' %}">Voltar</a></h1>
     <h1>Lista de Clientes</h1>
-    <ul>
+    <table border="1">
+
         {% for customer in customers %}
-            <li>{{ customer.name }} - EMAIL: {{ customer.email }} - CPF: {{ customer.cpf }}</li>
+            <tr><td>{{ customer.name }} </td><td>EMAIL: {{ customer.email }} </td><td>CPF: {{ customer.cpf }} </td></tr>
         {% endfor %}
-    </ul>
+
+    </table>
     <a href="{% url 'add_customer' %}">Adicionar Cliente</a>
 </body>
 </html>
